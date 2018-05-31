@@ -21,7 +21,7 @@ p {
     height: 350px;
 }
 
-.slider figure div {
+.slide {
     width: 20%;
     float: left;
 }
