@@ -15,3 +15,13 @@ p {
     padding-top: 100px;
     color: white;
 }
+
+.slider {
+    overflow: hidden;
+    height: 350px;
+}
+
+.slider div {
+    width: 20%;
+    float: left;
+}
