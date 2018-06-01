@@ -5,9 +5,7 @@
   font-size: 22px;
 }
 body {
-  background-image: url("../images/space-art-pxhere-cc0.jpg");
-  background-size: cover;
-  background-color: rgba(0,0,0,0.5;
+  background-color: #0f0f3a;
 }
 .grid-container {
   display: grid;
