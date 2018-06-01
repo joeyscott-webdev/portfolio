@@ -1,61 +1,135 @@
-html {
-    scroll-behavior: smooth;
-    white-space: nowrap;
+.html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-size: 22px;
 }
 body {
   background-color: black;
-  color: white;
-  font-size: 16px;
-  overflow: hidden;
+  background-image: url("../images/space-art-pxhere-cc0.jpg");
+  background-size: cover;
 }
-#anchors {
-  display: flex;
-  justify-content: space-around;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0px;
+  margin: 0px;
 }
 
-a {
-    display: inline-block;
-    font-size: 1.3em;
-    text-decoration: none;
+.grid-container2 {
+  display: subgrid;
+  grid-template-columns: auto auto auto;
+  padding: 0px;
+  margin: 0px;
 }
-a:link {
-  color: #fff;
+
+.grid-item {
+  grid-column-start: 1;
+  /*background-color: rgba(255, 255, 255, 0.5);*/
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 0px;
+  font-size: 1.6em;
+  text-align: center;
+  color: white;
 }
-a:visited {
-  color: #fff;
+
+.grid-item2 {
+  grid-column-start: 1;
+  /*background-color: rgba(255, 255, 255, 0.5);*/
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 0px;
+  font-size: 1em;
+  width: 50vw;
+  text-align: center;
+  color: white;
 }
-div {
-    display: inline-block;
-    width: 100%;
-    padding: 0px;
-    position: relative;
-    text-align: center;
+
+/* Need Absolute Items here ie. site logo and navigation */
+
+.header-section {
+  background: url("") 50% no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-article {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    top: 15px;
-    padding: 0px;
-    position: relative;
-    text-align: center;
+
+.header-section .header-section-text {
+  color: #fefefe;
+  text-shadow: 2px 2px 4px #521ad8;
 }
-#home {
-    left: 0px;
+
+.intro {
 }
-#about {
-    left: calc(412px * 1);
+
+.marketing {
+
 }
-#skills {
-    left: calc(412px * 2);
+
+.flex-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /*border-style: solid; for debug */
+  align-items: center;
+  justify-content: center;
 }
-#projects {
-    left: calc(412px * 3);
+
+.flex-container .card {
+  border-style: solid;
+  border-color: blue;
+  padding: 5px;
+  margin: 10px;
+  height: 230px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  flex: 0 0 150px;
+  border-radius: 35px 35px 0 0;
 }
-#contact {
-    left: calc(412px * 4);
+
+.flex-container .card i {
+  font-size: 1.8em;
+}
+
+.flex-container .card p {
+  font-size: 0.8em;
+}
+
+.flex-column {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 50vw;
+  flex-direction: column;
+  border-style: solid;/* for debug */
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container .flex-item {
+  border-style: solid;
+  border-color: blue;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-basis: 40vw;
+  justify-content: center;
+}
+
+#stretch {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 40vh;
+  flex-basis: 45vw;
+  /* background: url("") 50% no-repeat;
+  background-size: cover;*/
+}
+
+.flex-container .flex-item p {
+  font-size: 1em;
+  flex-basis: 45vw;
+  flex-wrap: wrap;
 }
