@@ -22,6 +22,7 @@ body {
   grid-template-columns: auto auto auto;
   padding: 0px;
   margin: 0px;
+  width: 100%;
 }
 
 .grid-item {
@@ -37,14 +38,15 @@ body {
 .grid-item2 {
   grid-column-start: 1;
   /*background-color: rgba(255, 255, 255, 0.5);*/
-  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 0px;
   font-size: 1em;
-  width: 50vw;
+  width: 100%;
   text-align: center;
   color: white;
 }
-
+.grid-item2 h3 {
+  margin: 10px;
+}
 /* Need Absolute Items here ie. site logo and navigation */
 
 .header-section {
@@ -64,10 +66,13 @@ body {
 
 .intro {
   background: linear-gradient(to bottom right, #222223, #0b0b51);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .marketing {
-
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .flex-container {
@@ -139,14 +144,17 @@ body {
 }
 
 .flex-container .flex-item {
-  border-style: solid;
-  border-color: blue;
+  margin-top: 100px;
+  margin-bottom: 100px;
   align-items: center;
   flex-wrap: nowrap;
-  flex-basis: 40vw;
+  flex-basis: 100vw;
   justify-content: center;
 }
-
+.skills {
+  background: linear-gradient(to bottom right, #222223, #0b0b51);
+  align-items: center;
+}
 #stretch {
   flex-grow: 1;
   flex-shrink: 1;
