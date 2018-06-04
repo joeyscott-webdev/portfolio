@@ -60,6 +60,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .header-section .header-section-text {
@@ -167,22 +168,23 @@ body {
 }
 /* Container for skill bars */
 .container {
-  width: 100%; /* Full width */
+  width: 100%;
   background-color: #ddd; /* Grey background */
 }
 
 .skillbox {
   font-size: 0.8em;
-  text-align: right; /* Right-align text */
-  padding-right: 20px; /* Add some right padding */
-  line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
-  color: white; /* White text color */
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+  color: white;
 }
 
 .html {width: 75%; background-color: #4CAF50;} /* Green */
 .css {width: 75%; background-color: #2196F3;} /* Blue */
 .js {width: 50%; background-color: #f44336;} /* Red */
 .php {width: 25%; background-color: #808080;} /* Dark Grey */
+
 #stretch {
   flex-grow: 1;
   flex-shrink: 1;
@@ -196,6 +198,117 @@ body {
   font-size: 1em;
   flex-basis: 45vw;
   flex-wrap: wrap;
+}
+
+.asteroids {
+  position: absolute;
+  overflow: hidden;
+  top: 0vh;
+  left: 0vw;
+  height: 99vh;
+  width: 99vw;
+  z-index: 1;
+}
+.asteroid:first-of-type {
+  background-image: url("../images/cc0-asteroid-4.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10vh;
+  width: 8vw;
+  top: -10vh;
+  left: -10vw;
+  animation: floatse 20s linear infinite;
+  animation-delay: 20s;
+}
+.asteroid:nth-of-type(2) {
+  background-image: url("../images/cc0-asteroid-3.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 14vh;
+  width: 10vw;
+  top: 110vh;
+  left: -10vw;
+  animation: floatne 22s linear infinite;
+  animation-delay: 4s;
+}
+.asteroid:nth-of-type(3) {
+  background-image: url("../images/cc0-asteroid-2.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 5vh;
+  width: 4vw;
+  top: 50vh;
+  left: 105vw;
+  animation: floatnw 25s linear infinite alternate;
+  animation-delay: 12s;
+}
+.asteroid:nth-of-type(4) {
+  background-image: url("../images/cc0-asteroid-4.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 5vh;
+  width: 4vw;
+  top: 105vh;
+  left: 75vw;
+  animation: floatsw 35s linear infinite alternate;
+  animation-delay: 28s;
+}
+@keyframes floatse {
+  0% {
+    top: -10vh;
+    left: -10vw;
+    transform: rotate(0);
+  }
+  100% {
+    top: 105vh;
+    left: 105vw;
+    transform: rotate(180deg);
+  }
+}
+@keyframes floatne {
+  0% {
+    top: 110vh;
+    left: -10vw;
+    transform: rotate(0);
+  }
+  100% {
+    top: -5vh;
+    left: 105vw;
+    transform: rotate(360deg);
+  }
+}
+@keyframes floatnw {
+  0% {
+    top: 50vh;
+    left: 105vw;
+    transform: rotate(0);
+  }
+  100% {
+    top: -10vh;
+    left: -10vw;
+    transform: rotate(720deg);
+  }
+}
+@keyframes floatsw {
+  0% {
+    top: 105vh;
+    left: 75vw;
+    transform: rotate(0);
+  }
+  50% {
+    top: -5vh;
+    left: 35vw;
+    transform: rotate(720deg);
+  }
+  100% {
+    top: -5vh;
+    left: 35vw;
+    transform: rotate(720deg);
+  }
 }
 @keyframes translateBackground{
   0%{
