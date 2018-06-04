@@ -6,10 +6,16 @@
 }
 body {
   background-color: #0a0a28;
-  background-image: url(../images/2k_stars.jpg);
+  background-image: url("../images/2k_stars.jpg");
+  /*parallaxed background image*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   font-family: 'Share Tech', sans-serif;
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -27,8 +33,6 @@ body {
 
 .grid-item {
   grid-column-start: 1;
-  /*background-color: rgba(255, 255, 255, 0.5);*/
-  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 0px;
   font-size: 1.6em;
   text-align: center;
@@ -38,7 +42,6 @@ body {
 .grid-item2 {
   grid-column-start: 1;
   /*background-color: rgba(255, 255, 255, 0.5);*/
-  padding: 0px;
   font-size: 1em;
   width: 100%;
   text-align: center;
@@ -64,9 +67,15 @@ body {
   text-shadow: 2px 2px 4px #521ad8;
 }
 
+.header-section .header-section-text h1 {
+  margin: 0px;
+}
+
 .intro {
   background: linear-gradient(to bottom right, #222223, #0b0b51);
   padding-top: 100px;
+  padding-left: 10vw;
+  padding-right: 10vw;
   padding-bottom: 100px;
 }
 
@@ -85,10 +94,10 @@ body {
   justify-content: center;
 }
 #p1 {
-  background-image: url(../images/planet1.png);
+  background-image: url("../images/planet1.png");
   background-repeat: repeat-x;
   background-size: cover;
-  box-shadow: 0 0 40px 6px
+  box-shadow: 0 0 30px 4px
   rgba(15, 189, 255, 0.75);
   animation: translateBackground 10s infinite linear;
 }
@@ -96,7 +105,7 @@ body {
   background-image: url(../images/planet2.png);
   background-repeat: repeat-x;
   background-size: cover;
-  box-shadow: 0 0 40px 6px
+  box-shadow: 0 0 30px 4px
   rgba(15, 189, 40, 0.75);
   animation: translateBackground 35s infinite linear;
 }
@@ -154,7 +163,26 @@ body {
 .skills {
   background: linear-gradient(to bottom right, #222223, #0b0b51);
   align-items: center;
+  padding: 50px;
 }
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skillbox {
+  font-size: 0.8em;
+  text-align: right; /* Right-align text */
+  padding-right: 20px; /* Add some right padding */
+  line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+  color: white; /* White text color */
+}
+
+.html {width: 75%; background-color: #4CAF50;} /* Green */
+.css {width: 75%; background-color: #2196F3;} /* Blue */
+.js {width: 50%; background-color: #f44336;} /* Red */
+.php {width: 25%; background-color: #808080;} /* Dark Grey */
 #stretch {
   flex-grow: 1;
   flex-shrink: 1;
