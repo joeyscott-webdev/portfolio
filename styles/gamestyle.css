@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.scoreboard {
+  text-align: center;
+}
+
+.gameboard {
+  background: linear-gradient(135deg, rgba(181,189,200,1)
+  0%,rgba(130,140,149,1) 29%,rgba(40,52,59,1) 81%);
+  border: #111 1px solid;
+  border-radius: 4px;
+  width: 700px;
+  height: 480px;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(30,87,153,1)
+  0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  border: #000 1px solid;
+  box-shadow: 5px 10px 5px;
+  width: 90px;
+  height: 90px;
+  float: left;
+  margin: 10px;
+  padding: 2px;
+  cursor: crosshair;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.card i {
+  display: none;
+  width: 90px;
+  height: auto;
+  margin-top:10px;
+  color: black;
+  font-size: 64px;
+}
+
+.flipped i {
+  display: block;
+}
+
+.disabled {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+}
