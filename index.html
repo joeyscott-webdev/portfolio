@@ -7,115 +7,221 @@
     <meta name="keywords" content="HTML,CSS,JavaScript">
     <meta name="author" content="Joey Scott">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   </head>
   <body>
-    <div class="asteroids">
-      <!--This is a container for my hero section animation
-      it will be positioned absolutely with a z index behind
-      the header section-->
-      <div class="asteroid"></div>
-      <div class="asteroid"></div>
-      <div class="asteroid"></div>
-      <div class="asteroid"></div>
-      <div class="rocket"></div>
-      <div class="tesla"><!--this is an easter egg =P--></div>
-    </div>
-    <div class="grid-container">
-      <div class="grid-item header-section">
-        <div class="header-section-text">
-          <h4>Joey Scott</h4>
-          <h1>Launching great websites and amazing experiences</h1>
-        </div>
-      </div>
-      <div class="grid-item intro"><h2>What can I do for you?</h2><h4>I am a software and front-end web developer. Creativity is my passion. I create professional, functional, and stylish websites. I am currently finishing a BS in Software Development. 
-        <br>Here are some services I provide:</h4>
-      </div>
-      <div class="grid-item marketing">
-        <div class="flex-container">
-          <div class="card" id="p1"><i class="fa fa-pencil-square-o"></i>
-            <h3> Design </h3>
-            <p>Sites built around your content ensuring a custom feel</p>
+    <header>
+      <div id="header-inner">
+        <a href="index.html" id="logo"><img src="images/logo.png" alt="initials"></a>
+        <nav>
+          <div id="menu-icon" class="container" onclick="menuFunction(this)">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+            <ul class="menu">
+              <li><a href="#top" class="home">Home</a></li>
+              <li><a href="#about" class="about">About</a></li>
+              <li><a href="#skills" class="skills">Skills</a></li>
+              <li><a href="#projects" class="projects">Projects</a></li>
+              <li><a href="#projects" class="contact">Contact</a></li>
+            </ul>
           </div>
-          <div class="card" id="p2"><i class="fa fa-arrows"></i>
-            <h3> Responsive </h3>
-            <p>Websites built to support any device</p>
-          </div>
-          <div class="card" id="p3"><i class="fa fa-gear"></i>
-            <h3> Animations </h3>
-            <p>Clean animations provide a professonal and finished touch</p>
-          </div>
-        </div>
+          <ul class="menu">
+            <li><a href="#top" class="home">Home</a></li>
+            <li><a href="#about" class="about">About</a></li>
+            <li><a href="#skills" class="skills">Skills</a></li>
+            <li><a href="#projects" class="projects">Projects</a></li>
+            <li><a href="#projects" class="contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="grid-item about">
-        <div class="flex-container">
+    </header>
+<!--END HEADER-->
+    <section class="hero">
+      <div class="hero-inner">
+        <img src="images/6.png" id="heroimg" alt="bust">
+      </div>
+    </section>
+<!--END HERO SECTION-->
 
-          <div class="flex-item">
-            <div class="grid-container2">
-              <div class="grid-item2"><h2>About Me</h2>
-              </div>
-              <div class="grid-item2">
-                <p>As a teen I developed a love for IT and programming.
-                  I sidelined those ambitions to join the Army in 2005.
-                  Although I have had a good career within the defense industry,
-                  in 2017 I decided to persue my true
-                  passion, web development.</p>
-                <p>Aside from the computer stuff, I also enjoy spending time with my family,
-                  camping, playing on the lake, and snowboarding.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="about-wrapper" id="about">
+      <article id="aboutimg" class="aboutimg">
+        <img src="images/joey_scott_2015.jpg" alt="me home after deployment">
+      </article>
+      <aside id="abouttxt">
+        <h2>ABOUT ME</h2>
+        <p>As a teen I developed a love for software and web development.
+          I sidelined those ambitions to join the Army in 2005.
+          Although I had a good career within the defense industry, I found
+          myself constantly working on things like organizational websites or
+          databases because I was always drawn to the creative process of
+          development.
+          <br>In 2018 I decided to pursue that passion. Since then I have blown through a wide
+          number of certifications and the majority of my second Bachelor's
+          degree (which is Software Development). <br>Apart from computers, I enjoy spending
+          time with my family, camping, playing on the lake, and snowboarding.</p>
+      </aside>
+    </section>
+<!--END ABOUT SECTION-->
+    <section class="skills-wrapper" id="skills">
+      <article id="skillstxt">
+        <h2>MY SKILLS</h2>
+        <p>I have obtained a host of certifications which have helped me to
+        improve my skills including; CIW Site Development Associate,
+        CIW HTML and CSS3 Specialist, Microsoft MTA in Software Development
+        Fundamentals, and CompTIA A+. In addition to the certifications I have
+        completed nearly 3/4ths of a Bachelors of Science degree in Software
+        Development. Finally, I have transitioned from an 11 year career in the
+        United Stated Army in which I learned how to operate under extreme
+        stress conditions while staying resillient. The following is how I would rate my skills:</p>
+      </article>
+      <aside id="skillsimg" class="skillsimg">
+        <img src="images/skills.jpg" alt="epic looking nunchucks">
+      </aside>
+    </section>
+<!--END SKILLS SECTION-->
+    <section class="one-fourth" id="html">
+      <h3>HTML5</h3>
+      <td><i class="fab fa-html5"></i></td>
+      <div class="skillbox">
+        <div class="skillbar expert"></div>
       </div>
-      <div class="grid-item skills">
-        <h2>My Skills</h2>
-        <p>HTML</p>
-        <div class="container">
-          <div class="skillbox html">ADVANCED</div>
-        </div>
+      <p>Advanced</p>
 
-        <p>CSS</p>
-        <div class="container">
-          <div class="skillbox css">ADVANCED</div>
-        </div>
+    </section>
+    <section class="one-fourth" id="css">
+      <h3>CSS3</h3>
+      <td><i class="fab fa-css3"></i></td>
+      <div class="skillbox">
+        <div class="skillbar expert"></div>
+      </div>
+      <p>Advanced</p>
 
-        <p>JavaScript</p>
-        <div class="container">
-          <div class="skillbox js">FAMILLIAR</div>
-        </div>
+    </section>
+    <section class="one-fourth" id="javascript">
+      <h3>JavaScript</h3>
+      <td><i class="fab fa-js-square"></i></td>
+      <div class="skillbox">
+        <div class="skillbar advanced"></div>
+      </div>
+      <p>Intermediate</p>
 
-        <p>PHP</p>
-        <div class="container">
-          <div class="skillbox php">BEGINNER</div>
-        </div>
+    </section>
+    <section class="one-fourth" id="sass">
+      <h3>Sass</h3>
+      <td><i class="fab fa-sass"></i></td>
+      <div class="skillbox">
+        <div class="skillbar familliar"></div>
+      </div>
+      <p>Novice</p>
 
+    </section>
+<!--END FOUR COLUMN SECTION-->
+    <section class="one-fourth" id="second">
+      <h3>SQL</h3>
+      <td><i class="fas fa-database"></i></td>
+      <div class="skillbox">
+        <div class="skillbar familliar"></div>
       </div>
-      <div class="grid-item portfolio">
-        <div class="flex-container">
-          <h2>My Projects Comming Soon!</h2>
-          <!--<div class="card">Card4
-          </div>
-          <div class="card p1">card5
-          </div>
-          <div class="card p2">card6
-          </div>
-          <div class="card p3">card7
-          </div>
-          <div class="card p1">card8
-          </div>-->
-        </div>
+      <p>Novice</p>
+    </section>
+    <section class="one-fourth" id="javascript">
+      <h3>REACT</h3>
+      <td><i class="fab fa-react"></i></td>
+      <div class="skillbox">
+        <div class="skillbar familliar"></div>
       </div>
-      <div class="grid-item resume">
-        <h2>Download My Resume</h2><p><a href="SCOTT_SD_RESUME_WebVersion.pdf">My Current Resume</a></p>
+      <p>Novice</p>
+    </section>
+    <section class="one-fourth" id="css">
+      <h3>TEAMWORK</h3>
+      <td><i class="fas fa-hands-helping"></i></td>
+      <div class="skillbox">
+        <div class="skillbar master"></div>
       </div>
-      <div class="grid-item contact">
-        <h2>Contact Me</h2><p>
-Send me an e-mail:
-<a href="mailto:joey.m.scott1@gmail.com?Subject=Your%20Resume" target="_top">Click Here</a>
-</p>
+      <p>Expert</p>
+    </section>
+    <section class="one-fourth" id="html">
+      <h3>TIME MANAGEMENT</h3>
+      <td><i class="far fa-hourglass"></i></td>
+      <div class="skillbox">
+        <div class="skillbar master"></div>
       </div>
-    </div>
+      <p>Expert</p>
+
+    </section>
+    <!--END FOUR COLUMN SECTION-->
+    <section class="projects-wrapper" id="projects">
+      <h2>MY PROJECTS</h2>
+      <section class="one-third" id="projectone">
+        <h3>MEMORY GAME</h3>
+        <p>To display my fundamental JavaScript skills I decided to tackle a
+          simple flip card memory game. I wanted to do something that didnt
+          require too much state saving as editing the DOM without a library
+          is a pain. Click the link to try it out yourself!</p>
+      </section>
+      <section class="one-third" id="projecttwo">
+        <h3>RENTAL REI CALCULATOR</h3>
+        <p>For a much larger project to portray my skills I decided to build an
+        atypical calculator. Because of my interests in Real-Estate Investing,
+        I wanted to build a calculator to analyze properties on the market to
+        assess if they would make good investment opportunities.</p>
+      </section>
+      <section class="one-third" id="projectthree">
+        <h3>COMING SOON!</h3>
+        <p>I am constantly working on my skills. When I develop something
+          new and noteworthy I will display it here. I want this project to
+          focus on skills that I have not already displayed within my projects
+          section.</p>
+      </section>
+    </section>
+<!--END PROJECTS SECTION-->
+    <section id="contactinfo">
+      <h2>RESUME AND CONTACT</h2>
+      <ul class="social">
+        <li><a href="SCOTT_SD_RESUME_WebVersion.pdf" target="_blank"><i class="fas fa-file-download"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/jscott-developer/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="mailto:joey.m.scott1@gmail.com?Subject=Interesting%20website" target="_blank"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+    </section>
+<!--END CONTACT SECtION-->
+    <footer class="copywright">
+      <p>&copy; 2018 Joey Scott</p>
+    </footer>
+    <a id="bottom"></a>
+<!--END COPYWRIGHT-->
+    <script>
+    function menuFunction(x) {
+        x.classList.toggle("change");
+    }
+
+    var images = new Array() //an array to hold my hero images
+    images[0] = "images/1.png";
+    images[1] = "images/2.png";
+    images[2] = "images/3.png";
+    images[3] = "images/4.png";
+    images[4] = "images/5.png";
+    images[5] = "images/6.png";
+    var interval = null //variable to hold interval method so i can stop it later
+    var x=0; //variable to reference images in the array
+
+    function newInterval(){
+      interval = setInterval("changeImage()", 2000);
+    } //this function is later called at window.onload to start the interval
+
+
+    function changeImage()//the function to execute in intervals which change the img src of the hero img
+    {
+      document.getElementById("heroimg").src=images[x]
+      x++;
+      if(x >= images.length){
+        clearInterval(interval); // stop the interval
+    }
+    }
+    window.onload = newInterval()//calling newInterval func on window load
+    </script>
   </body>
 </html>
