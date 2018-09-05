@@ -157,12 +157,11 @@
     <section class="projects-wrapper" id="projects">
       <h2>MY PROJECTS</h2>
       <section class="one-third" id="projectone">
-        <h3>MEMORY GAME</h3>
-        <div class="memory"><a href="memory.html" target="_blank"><img src="images/son_testing.jpg" alt="son testing memory"></a></div>
-        <p>To display my fundamental JavaScript skills I decided to tackle a
-          simple flip card memory game. I wanted to do something that didnt
-          require too much state saving yet showcased how to inject HTML, create
-          loops, and arrays.</p>
+
+        <div class="memory">
+          <h3>MEMORY GAME</h3>
+          <a href="memory.html" target="_blank"><img src="images/memoryclip.png" alt="memory game"></a>
+        </div>
       </section>
       <section class="one-third" id="projecttwo">
         <h3>COMING SOON!</h3>
@@ -196,6 +195,10 @@
 <!--END COPYWRIGHT-->
     <script>
     function menuFunction(x) {
+        x.classList.toggle("change");
+    }
+
+    function showcase(x) {
         x.classList.toggle("change");
     }
 
