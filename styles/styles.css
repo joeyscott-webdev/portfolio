@@ -46,6 +46,7 @@ header {
   width: 100%;
   height: 86px;
   position: fixed;
+  z-index: 9999;
 }
 
 #header-inner {
@@ -118,6 +119,12 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
+.hero-inner h2 {
+  position: absolute;
+  z-index: 2;
+  top: 15%;
+  right: 10%;
+}
 /*--END HERO SECTION--*/
 
 .one-fourth {
@@ -396,6 +403,12 @@ aside {
 
   .hero {
     padding-top: 86px;
+  }
+
+  .hero-inner h2 {
+    font-size: 110%;
+    top: 15%;
+    right: 5%;
   }
 
   .one-fourth {
