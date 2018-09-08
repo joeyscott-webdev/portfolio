@@ -52,22 +52,30 @@ function addCards(item, index){
 }
 
 function flipCard(x){
-  x.classList.add("flipped");//add the flipped class to the div
-  moveCounter = moveCounter + 1 //add one to the move moveCounter
-  scoreboardDiv = document.getElementById("score");
-  scoreboardDiv.innerHTML = '' + moveCounter + '';
-  if(memoryValues.indexOf(x.innerHTML) > -1) {//MATCH DETECTED
-    setTimeout(matchDetected, 2000);
-  }
-  else if (secondflip == 1) {
-    setTimeout(turnOver, 2000);//gives the player time to look at cards before flipping back
+  if(secondflip >= 2){
+    //do nothing
+    return;
   }
   else {
-    memoryValues.push(x.innerHTML);
-    secondflip = secondflip + 1;
-    console.log("No Match object pushed to array");
-    console.log(memoryValues);
+    //do everything
+    x.classList.add("flipped");//add the flipped class to the div
+    moveCounter = moveCounter + 1 //add one to the move moveCounter
+    scoreboardDiv = document.getElementById("score");
+    scoreboardDiv.innerHTML = '' + moveCounter + '';
+    if(memoryValues.indexOf(x.innerHTML) > -1) {//MATCH DETECTED
+      setTimeout(matchDetected, 1000);
+    }
+    else if (secondflip == 1) {
+      setTimeout(turnOver, 1000);//gives the player time to look at cards before flipping back
+    }
+    else {
+      memoryValues.push(x.innerHTML);
+      secondflip = secondflip + 1;
+      console.log("No Match object pushed to array");
+      //console.log(memoryValues);
+    }
   }
+
 }
 
 function turnOver(){ //the seperated function for flipping cards back over that dont match
