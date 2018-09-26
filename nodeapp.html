@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joey Scott - Web Developer</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Joey Scott portfolio for web development. Building great websites and amazing experiences.">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Joey Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div id="header-inner">
+        <a href="index.html" id="logo"><img src="images/logo.png" alt="initials"></a>
+        <nav>
+          <div id="menu-icon" class="container" onclick="menuFunction(this)">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+            <ul class="menu">
+              <li><a href="#top" class="home">Home</a></li>
+              <li><a href="#about" class="about">About</a></li>
+              <li><a href="#skills" class="skills">Skills</a></li>
+              <li><a href="#projects" class="projects">Projects</a></li>
+              <li><a href="#projects" class="contact">Contact</a></li>
+            </ul>
+          </div>
+          <ul class="menu">
+            <li><a href="index.html#top" class="home">Home</a></li>
+            <li><a href="index.html#about" class="about">About</a></li>
+            <li><a href="index.html#skills" class="skills">Skills</a></li>
+            <li><a href="index.html#projects" class="projects">Projects</a></li>
+            <li><a href="index.html#projects" class="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+<!--END HEADER-->
+    <section class="hero">
+      <div class="intro">
+        <h1>Node.js and MySQL Application</h1>
+        <p>For this project I needed something that would round out my skills and give me some experience with tying 
+          a website together to a backend. I researched a bit and decided to stick with technology that would keep 
+          me working with JavaScript. The tech I found was Node.js.  Node.js is a framework which offers a JavaScript 
+          solution to a server environment. </p>
+        <img src="images/Novus_Img_01.png" alt="My webapp home route" class="screenshot">
+        <p>I started to create my app using the Express.js module to create my routes. I then used the included markup 
+          templating engine, pug.js (formerly known as Jade) to create my markup. I also began setting up a local MySQL 
+          database using XAMPP and MyPhpAdmin. I first created a table to hold blog posts in the database and created 
+          the MySQL connection with JavaScript using the node.js included MySQL module.</p>
+        <img src="images/Novus_Img_02.png" alt="The beginning of my app.js file showing database connection" class="screenshot">
+        <p>I created some test posts within the database to display on my page and segmented my HTML templates with one 
+          overall layout and all other pages extending that layout. From there I started to add the SQL queries to pull 
+          all the articles from the database, store them into a temporary array of objects.  I then manipulated the 
+          array as I needed. For example, on the home route of the website I want the most recent three posts to be 
+          shown. So I sliced the array using the JavaScript array.slice() function then I reversed the array using the 
+          array.reverse() function. I used that to display a news section and for the actual Blog page I just reversed 
+          the order of the posts by looping through the query in reverse instead of just calling the array.reverse() 
+          function again. </p>
+        <img src="images/Novus_Img_03.png" alt="The blog page of the site" class="screenshot">
+        <p>Unfortunately, this application isn’t finished yet as I am also working on a register/login section using 
+          the bcrypt.js module. I will continue to update this section as I get closer to completion.</p>
+        <img src="images/Novus_Img_04.png" alt="Example of the pug template which displays the database query" class="screenshot">
+      </div>
+      <!--
+      <div class="hero-inner">
+        <img src="images/6.png" id="heroimg" alt="bust">
+      </div>
+      -->
+    </section>
+<!--END HERO SECTION-->
+
+
+<!--END PROJECTS SECTION-->
+    <section id="contactinfo">
+      <h2>RESUME AND CONTACT</h2>
+      <ul class="social">
+        <li><a href="SCOTT_SD_RESUME_WebVersion.pdf" target="_blank"><i class="fas fa-file-download"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/jscott-developer/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="mailto:joey.m.scott1@gmail.com?Subject=Interesting%20website" target="_blank"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+    </section>
+<!--END CONTACT SECTION-->
+    <footer class="copywright">
+      <p>&copy; 2018 Joey Scott</p>
+    </footer>
+    <a id="bottom"></a>
+<!--END COPYWRIGHT-->
+    <script>
+    function menuFunction(x) {
+        x.classList.toggle("change");
+    }
+
+    function showcase(x) {
+        x.classList.toggle("change");
+    }
+
+    var images = new Array() //an array to hold my hero images
+    images[0] = "images/1.png";
+    images[1] = "images/2.png";
+    images[2] = "images/3.png";
+    images[3] = "images/4.png";
+    images[4] = "images/5.png";
+    images[5] = "images/6.png";
+    var interval = null //variable to hold interval method so i can stop it later
+    var x=0; //variable to reference images in the array
+
+    function newInterval(){
+      interval = setInterval("changeImage()", 2000);
+    } //this function is later called at window.onload to start the interval
+
+
+    function changeImage()//the function to execute in intervals which change the img src of the hero img
+    {
+      document.getElementById("heroimg").src=images[x]
+      x++;
+      if(x >= images.length){
+        clearInterval(interval); // stop the interval
+    }
+    }
+    window.onload = newInterval()//calling newInterval func on window load
+    </script>
+  </body>
+</html>
